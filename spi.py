@@ -35,12 +35,13 @@ class Spisok:
     sp = [a1, a2, a3]
     def see(self):
         for i in range(len(self.sp)):
-            print(self.sp[i].__dict__)
-    def dell(self):
-        self.see()
-        x = int(input('введите номер словаря для удаления '))
+            print(self.sp[i])
+    def dell(self, x):
+        # self.see()
+        # x = int(input('введите номер словаря для удаления '))
         del self.sp[x]
-        self.see()
+        # self.see()
+        return self.sp[x]
     def add(self, a):
         self.sp.append(a)
 
