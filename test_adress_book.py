@@ -2,7 +2,7 @@ import unittest
 from spi import Spisok
 #как запустить тест по коду из другого файла?
 
-class Test_adress_book(unittest.TestCase):
+class Test_Spisok(unittest.TestCase):
     def test_dell(self):
         sp1 = Spisok()
         self.assertNotEqual(sp1.dell(1), {'name': 'Jon',
@@ -11,17 +11,11 @@ class Test_adress_book(unittest.TestCase):
     'number': 768,
     'job': 'actor'}, 'метод не работает')
 
-
-
-    # def test_see(self):
-    #     n = '3'
-    # def add(self):
-    #     n = '1'
-    #     self.name = 'Test'
-    #     self.last_name = 'Test'
-    #     self.email = 'Test'
-    #     self.number = 'Test'
-    #     self.job = 'Test'
+class Test_adress_book(unittest.TestCase):
+    def test_add(self):
+        sp1 = Spisok()
+        a = {'name': 'Test', 'last_name': 'Test', 'email': 'Test', 'number': 'Test', 'job': 'Test'}
+        self.assertEqual(sp1.add(a), {'name': 'Test', 'last_name': 'Test', 'email': 'Test', 'number': 'Test', 'job': 'Test'})
 
 
 # if __name__ == '__main__':
